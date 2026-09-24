@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0b0b0d" />
+<title>Fal Studio</title>
+<style>
+:root{--bg:#09090b;--panel:#111114;--panel2:#17171b;--line:#26262c;--muted:#9a9aa3;--text:#f7f7f8;--accent:#fff;--shadow:0 18px 50px rgba(0,0,0,.35)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;border-right:1px solid var(--line);padding:18px 14px;background:#0c0c0f}.brand{display:flex;align-items:center;gap:10px;padding:8px 10px 18px;font-size:18px;font-weight:700}.logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#fff,#7f7f88);box-shadow:0 0 0 1px #ffffff22 inset}.nav{display:grid;gap:6px}.nav button{all:unset;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;color:#c7c7cd;cursor:pointer}.nav button.active,.nav button:hover{background:#18181c;color:#fff}.nav .ico{width:20px;text-align:center}.side-section{margin-top:24px;padding:0 10px;color:#6f6f78;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.main{min-width:0}.topbar{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(9,9,11,.86);backdrop-filter:blur(18px);z-index:5}.tabs{display:flex;gap:8px}.tab{border:1px solid var(--line);background:#121215;color:#bbb;border-radius:999px;padding:8px 14px;cursor:pointer}.tab.active{background:#fff;color:#0b0b0d;border-color:#fff}.actions{display:flex;gap:8px}.btn{border:1px solid var(--line);background:#17171b;color:#fff;border-radius:10px;padding:9px 12px;cursor:pointer}.btn.primary{background:#fff;color:#0a0a0c;border-color:#fff;font-weight:700}.content{max-width:1280px;margin:0 auto;padding:28px 24px 56px}.hero{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.hero h1{font-size:32px;margin:0 0 6px;letter-spacing:-.03em}.hero p{margin:0;color:var(--muted)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px}.canvas{min-height:540px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#111114,#0e0e11);box-shadow:var(--shadow);padding:18px}.drop{border:1px dashed #38383f;border-radius:16px;min-height:320px;display:grid;place-items:center;text-align:center;color:#8e8e97;background:#0b0b0e;overflow:hidden}.drop img,.drop video{width:100%;height:100%;object-fit:contain;max-height:460px}.drop strong{display:block;color:#e9e9ec;margin-bottom:5px}.panel{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:16px;box-shadow:var(--shadow)}.panel h3{font-size:13px;margin:0 0 12px;color:#d7d7dc}.field{margin:14px 0}.label{display:flex;justify-content:space-between;color:#b7b7be;font-size:12px;margin-bottom:7px}.input,.select,textarea{width:100%;border:1px solid #2a2a31;background:#0d0d10;color:#fff;border-radius:11px;padding:10px 11px;outline:none}.input:focus,.select:focus,textarea:focus{border-color:#6f6f78}textarea{min-height:110px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.switch{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:10px 0;border-top:1px solid #202026}.switch:first-of-type{border-top:0}.switch input{accent-color:#fff}.generate{width:100%;margin-top:12px;padding:12px;border:0;border-radius:12px;background:#fff;color:#0b0b0d;font-weight:800;cursor:pointer}.generate:disabled{opacity:.5;cursor:not-allowed}.models{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}.model{border:1px solid var(--line);background:#111114;border-radius:15px;padding:14px;cursor:pointer}.model.active{border-color:#fff}.model b{display:block;font-size:13px}.model small{color:#85858e}.gallery-title{display:flex;justify-content:space-between;align-items:center;margin-top:34px}.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}.thumb{aspect-ratio:1/1.15;background:#121216;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;place-items:center;color:#64646e}.status{margin-top:12px;padding:10px 11px;border-radius:10px;background:#0c0c0f;border:1px solid #25252b;color:#aaa;display:none}.status.show{display:block}.mobile-nav{display:none}@media(max-width:980px){.app{grid-template-columns:1fr}.sidebar{display:none}.workspace{grid-template-columns:1fr}.models{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.topbar{padding:0 14px}.content{padding:20px 14px 92px}.mobile-nav{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;bottom:0;left:0;right:0;padding:8px max(8px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));background:rgba(12,12,15,.95);backdrop-filter:blur(16px);border-top:1px solid var(--line);z-index:20}.mobile-nav button{all:unset;text-align:center;padding:7px;color:#aaa;font-size:11px}.mobile-nav .active{color:#fff}.hero{align-items:start}.hero h1{font-size:27px}}@media(max-width:560px){.actions .btn:not(.primary){display:none}.models{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr}.canvas{padding:12px;min-height:420px}.drop{min-height:280px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo"></div>Fal Studio</div>
+  <div class="nav">
+    <button class="active"><span class="ico">✦</span>Create</button>
+    <button><span class="ico">◫</span>Generations</button>
+    <button><span class="ico">◎</span>Identity</button>
+    <button><span class="ico">⌁</span>Models</button>
+  </div>
+  <div class="side-section">Workspace</div>
+  <div class="nav">
+    <button><span class="ico">＋</span>New project</button>
+    <button><span class="ico">⚙</span>Settings</button>
+  </div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div class="tabs"><button class="tab active" data-mode="image">Image</button><button class="tab" data-mode="video">Video</button></div>
+  <div class="actions"><button class="btn" id="healthBtn">API status</button><button class="btn primary" id="newBtn">New</button></div>
+</header>
+<section class="content">
+  <div class="hero"><div><h1 id="title">Create images</h1><p id="subtitle">Generate or edit with Nano Banana and FLUX.</p></div></div>
+  <div class="workspace">
+    <div>
+      <div class="canvas">
+        <div class="drop" id="preview"><div><strong>Add a reference</strong><span>Paste a hosted image/video URL in the controls →</span></div></div>
+      </div>
+      <div class="models" id="modelCards"></div>
+      <div class="gallery-title"><h2 style="font-size:18px;margin:0">Recent</h2><span style="color:#777">Local session</span></div>
+      <div class="gallery" id="gallery"><div class="thumb">No generations yet</div><div class="thumb">+</div><div class="thumb">+</div><div class="thumb">+</div></div>
+    </div>
+    <aside class="panel">
+      <h3>Generation controls</h3>
+      <div class="field"><div class="label"><span>Model</span></div><select class="select" id="model"></select></div>
+      <div class="field"><div class="label"><span>Prompt</span></div><textarea id="prompt" placeholder="Describe what you want to create..."></textarea></div>
+      <div class="field" id="identityField"><div class="label"><span>Identity profile ID</span><span>optional</span></div><input class="input" id="profileId" placeholder="saved profile id" /></div>
+      <div class="field"><div class="label"><span>Plugin access token</span><span>saved on this device</span></div><input class="input" id="pluginToken" type="password" autocomplete="off" placeholder="Only if PLUGIN_TOKEN is enabled" /></div>
+      <div class="field" id="imageUrlField"><div class="label"><span>Reference image URL</span><span>optional</span></div><input class="input" id="imageUrl" placeholder="https://..." /></div>
+      <div class="field" id="videoUrlField" style="display:none"><div class="label"><span>Reference video URL</span><span>required for motion</span></div><input class="input" id="videoUrl" placeholder="https://...mp4" /></div>
+      <div class="row" id="videoOpts" style="display:none"><div class="field"><div class="label"><span>Aspect</span></div><select class="select" id="aspect"><option>9:16</option><option>16:9</option><option>1:1</option></select></div><div class="field"><div class="label"><span>Resolution</span></div><select class="select" id="resolution"><option>720p</option><option>1080p</option><option>480p</option></select></div></div>
+      <div class="switch"><span>Lock identity</span><input type="checkbox" id="lockIdentity" checked /></div>
+      <div class="switch" id="motionSwitch" style="display:none"><span>Preserve motion</span><input type="checkbox" id="preserveMotion" checked /></div>
+      <div class="switch"><span>Change only requested details</span><input type="checkbox" id="minimalChange" checked /></div>
+      <button class="generate" id="generateBtn">Generate</button>
+      <div class="status" id="status"></div>
+    </aside>
+  </div>
+</section>
+</main>
+</div>
+<nav class="mobile-nav"><button class="active">✦<br>Create</button><button>◫<br>History</button><button>◎<br>Identity</button><button>⚙<br>Settings</button></nav>
+<script>
+const imageModels=[['nano-banana-edit','Nano Banana','Reference editing'],['flux-2','FLUX.2','Photoreal image'],['flux-2-flash','FLUX.2 Flash','Fast drafts'],['flux-2-lora','FLUX.2 LoRA','Identity trained']];
+const videoModels=[['seedance-2-reference-fast','Seedance Fast','Reference video'],['seedance-2-reference','Seedance Quality','Higher quality'],['kling-v3-motion-standard','Kling Motion','Motion transfer'],['kling-v3-motion-pro','Kling Motion Pro','Higher quality']];
+let mode='image'; let chosen=imageModels[0][0];
+const $=id=>document.getElementById(id);
+function renderModels(){const arr=mode==='image'?imageModels:videoModels;$('modelCards').innerHTML=arr.map((m,i)=>`<div class="model ${m[0]===chosen?'active':''}" data-model="${m[0]}"><b>${m[1]}</b><small>${m[2]}</small></div>`).join('');$('model').innerHTML=arr.map(m=>`<option value="${m[0]}" ${m[0]===chosen?'selected':''}>${m[1]}</option>`).join('');document.querySelectorAll('.model').forEach(el=>el.onclick=()=>{chosen=el.dataset.model;renderModels();syncVideoOptions();});syncVideoOptions();}
+function setMode(next){mode=next;chosen=(mode==='image'?imageModels:videoModels)[0][0];document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===mode));$('title').textContent=mode==='image'?'Create images':'Create videos';$('subtitle').textContent=mode==='image'?'Generate or edit with Nano Banana and FLUX.':'Remake motion and scenes with Seedance or Kling.';$('videoUrlField').style.display=mode==='video'?'block':'none';$('videoOpts').style.display=mode==='video'?'grid':'none';$('motionSwitch').style.display=mode==='video'?'flex':'none';renderModels();updatePreview();}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>setMode(t.dataset.mode));$('model').onchange=e=>{chosen=e.target.value;renderModels();syncVideoOptions();};
+function updatePreview(){const i=$('imageUrl').value.trim(),v=$('videoUrl').value.trim();if(mode==='video'&&v){$('preview').innerHTML=`<video src="${v}" controls playsinline></video>`}else if(i){$('preview').innerHTML=`<img src="${i}" alt="reference"/>`}else{$('preview').innerHTML='<div><strong>Add a reference</strong><span>Paste a hosted image/video URL in the controls →</span></div>';}}
+$('imageUrl').oninput=updatePreview;$('videoUrl').oninput=updatePreview;
+function authHeaders(extra={}){const token=$('pluginToken').value.trim();return {...extra,...(token?{'Authorization':`Bearer ${token}`}:{})};}
+try{$('pluginToken').value=localStorage.getItem('falStudioPluginToken')||'';}catch(e){}
+$('pluginToken').onchange=()=>{try{localStorage.setItem('falStudioPluginToken',$('pluginToken').value.trim());}catch(e){}};
+function syncVideoOptions(){if(mode!=='video')return;const resolution=$('resolution');const isFast=chosen==='seedance-2-reference-fast';[...resolution.options].forEach(o=>{if(o.value==='1080p')o.disabled=isFast;});if(isFast&&resolution.value==='1080p')resolution.value='720p';} 
+$('healthBtn').onclick=async()=>{show('Checking API...');try{const r=await fetch('/health');const j=await r.json();show(j.fal_configured?'fal.ai connected ✓':'Server online — add FAL_KEY to generate');}catch(e){show('Could not reach server');}};
+$('newBtn').onclick=()=>{$('prompt').value='';$('imageUrl').value='';$('videoUrl').value='';updatePreview();show('New generation ready');};
+function show(msg){$('status').textContent=msg;$('status').classList.add('show');}
+function addGallery(url,type){const item=document.createElement('div');item.className='thumb';item.innerHTML=type==='video'?`<video src="${url}" controls playsinline style="width:100%;height:100%;object-fit:cover"></video>`:`<img src="${url}" style="width:100%;height:100%;object-fit:cover">`;$('gallery').prepend(item);}
+function findMedia(obj){if(!obj||typeof obj!=='object')return null;for(const k of ['url','video_url','image_url'])if(typeof obj[k]==='string'&&/^https?:/.test(obj[k]))return obj[k];for(const v of Object.values(obj)){const r=findMedia(v);if(r)return r;}return null;}
+$('generateBtn').onclick=async()=>{const prompt=$('prompt').value.trim();if(!prompt){show('Add a prompt first.');return;}const btn=$('generateBtn');btn.disabled=true;btn.textContent='Generating…';show('Submitting to fal.ai…');try{let endpoint='/generate/image',body={model:chosen,prompt};const pid=$('profileId').value.trim();const img=$('imageUrl').value.trim();const vid=$('videoUrl').value.trim();if(pid&&$('lockIdentity').checked)body.profile_id=pid;if(mode==='image'){if(img)body.image_urls=[img];}else if(chosen.startsWith('seedance')){endpoint='/generate/reference-video';if(img)body.image_urls=[img];if(vid)body.video_urls=[vid];body.aspect_ratio=$('aspect').value;body.resolution=$('resolution').value;}else{endpoint='/generate/motion-video';body.image_url=img;body.video_url=vid;if(!img||!vid)throw new Error('Kling Motion requires both an image URL and a video URL.');}
+if($('minimalChange').checked)body.prompt += '\nPreserve identity, pose, composition, lighting, and all details not explicitly requested. Change only the requested elements.';
+const r=await fetch(endpoint,{method:'POST',headers:authHeaders({'Content-Type':'application/json'}),body:JSON.stringify(body)});const j=await r.json();if(!r.ok)throw new Error(j.error?.message||j.error||'Generation failed');const url=findMedia(j.data);show(url?'Generation complete ✓':'Generation complete. Open response data/API history to inspect output.');if(url)addGallery(url,mode);}catch(e){show(e.message||String(e));}finally{btn.disabled=false;btn.textContent='Generate';}};
+renderModels();
+</script>
+</body></html>
